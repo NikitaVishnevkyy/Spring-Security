@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Login page</title>
+  <style>
+    #container {
+      padding-top:50px;
+      width:250px;
+      margin: 0 auto;
+      font-size:1.5rem;
+    }
+    input {
+      width: 100%;
+      display:block;
+      padding: 5px;
+      font-size: 1.1rem;
+      box-sizing: border-box;
+    }
+    label {
+      margin-top:auto;
+      display:block;
+    }
+    #submit, #submit:focus {
+      margin-top: 5px;
+      border-radius: 8px;
+      padding: 10px;
+      color: white;
+      background-color: #007bfe;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+<div id="container">
+  <b>Please sign in</b>
+  <br>
+  <form th:action="@{/login}" method="post">
+    <label for="username"></label>
+    <input type="text" id="username" name="username" autofocus="autofocus" placeholder="Email address" />
+    <label for="password"></label>
+    <input type="password" id="password" name="password" placeholder="Password" />
+    <input id="submit" type="submit" value="Login" />
+  </form>
+</div>
+</body>
+</html>
